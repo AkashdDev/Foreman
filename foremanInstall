@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+#Deploy Required Package
+yum -y install https://yum.puppet.com/puppet6-release-el-7.noarch.rpm \
+http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm \
+https://yum.theforeman.org/releases/2.1/el7/x86_64/foreman-release.rpm \
+foreman-release-scl foreman-vmware foreman-openstack foreman-installer
+
+#Provision the foreman
+foreman-installer
